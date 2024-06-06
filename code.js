@@ -42,14 +42,18 @@ carForm.addEventListener('submit', event => {
         renderCars();
         carNameInput.value = '';
         carModelInput.value = '';
+    } else {
+        alert('Пожалуйста, заполните все поля формы.');
     }
 });
 
 function editCar(index) {
-    const name = prompt('Введите новое название автомобиля:', cars[index].name);
-    const model = prompt('Введите новую модель автомобиля:', cars[index].model);
+    const car = cars[index];
+    const name = prompt('Введите новое название автомобиля:', car.name);
+    const model = prompt('Введите новую модель автомобиля:', car.model);
     if (name && model) {
-        cars[index] = new Car(name, model);
+        car.name = name;
+        car.model = model;
         renderCars();
     }
 }

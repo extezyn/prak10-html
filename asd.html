@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автомобили</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Автомобили</h1>
-    <div id="cars-list"></div>
-    <h2>Добавить новый автомобиль</h2>
-    <form id="car-form">
-        <label for="car-name">Название:</label>
-        <input type="text" id="car-name" required>
-        <label for="car-model">Модель:</label>
-        <input type="text" id="car-model" required>
-        <button type="submit">Добавить</button>
-    </form>
+    <div class="container">
+        <h1>Автомобили</h1>
+        <div id="cars-list"></div>
+        <h2>Добавить новый автомобиль</h2>
+        <form id="car-form">
+            <div class="form-group">
+                <label for="car-name">Название:</label>
+                <input type="text" id="car-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="car-model">Модель:</label>
+                <input type="text" id="car-model" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить</button>
+        </form>
+    </div>
     <script src="code.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
